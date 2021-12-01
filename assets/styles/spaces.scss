@@ -1,0 +1,80 @@
+@import "variables";
+
+$step: 4;
+$breakpoints: (
+        basic: 0,
+        sm: $sm,
+        md: $md,
+        lg: $lg,
+        xl: $xl,
+);
+$prefixes: (
+        t: ('top'),
+        b: ('bottom'),
+        r: ('right'),
+        l: ('left'),
+        y: ('top', 'bottom'),
+        x: ('right', 'left'),
+        a: (),
+);
+$spaceNames: (
+        margin: 'm',
+        padding: 'p',
+);
+
+
+@mixin make-spaces($step, $spaceNames, $prefixes, $breakpoints) {
+  @each $spaceName, $shortName in $spaceNames {
+    @each $breakpoint, $breakpoint-value in $breakpoints {
+      @if $breakpoint == basic {
+        @each $prefix, $directions in $prefixes {
+          @if $prefix == a {
+            @for $i from 0 through 15 {
+              .#{$shortName}#{$prefix}-#{$i} {
+                #{$spaceName}: #{$i * $step}px;
+              }
+            }
+          } @else {
+            @for $i from 0 through 15 {
+              .#{$shortName}#{$prefix}-#{$i} {
+                @each $direction in $directions {
+                  #{$spaceName}-#{$direction}: #{$i * $step}px;
+                }
+              }
+            }
+          }
+        }
+      } @else {
+        @media screen and (min-width: $breakpoint-value) {
+          @each $prefix, $directions in $prefixes {
+            @if $prefix == a {
+              @for $i from 0 through 15 {
+                .#{$shortName}#{$prefix}-#{$breakpoint}-#{$i} {
+                  #{$spaceName}: #{$i * $step}px;
+                }
+              }
+            } @else {
+              @for $i from 0 through 15 {
+                .#{$shortName}#{$prefix}-#{$breakpoint}-#{$i} {
+                  @each $direction in $directions {
+                    #{$spaceName}-#{$direction}: #{$i * $step}px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include make-spaces($step, $spaceNames, $prefixes, $breakpoints);
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.pr-20 {
+  padding-right: 80px;
+}

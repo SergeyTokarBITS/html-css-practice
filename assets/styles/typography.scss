@@ -1,0 +1,103 @@
+@import "variables";
+
+@mixin textSizes() {
+  @for $i from 6 through 11 {
+    .text-size-#{$i * 2} {
+      font-size: #{$i * 2}px;
+    }
+  }
+}
+
+@include textSizes();
+
+.text-size-0 {
+  font-size: 0;
+}
+
+.text-size-30 {
+  font-size: 30px;
+}
+
+.text-size-46 {
+  font-size: 46px;
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-color-white {
+  color: white;
+}
+
+.text-color-grey-lighten-1 {
+  color: $colorGreyLighten-1;
+}
+
+.text-color-grey-lighten-2 {
+  color: $colorGreyLighten-2;
+}
+
+.text-color-grey-darken-1 {
+  color: $colorGreyDarken-1;
+}
+
+h1, .text-h1 {
+  @extend .text-bold;
+  font-size: 46px;
+  line-height: 1.48em;
+  letter-spacing: -0.3px;
+}
+
+h2, .text-h2 {
+  font-size: 42px;
+}
+
+h3, .text-h3 {
+  @extend .text-bold;
+  font-size: 38px;
+  line-height: 1.32em;
+  letter-spacing: -0.3px;
+}
+
+h4, .text-h4 {
+  font-size: 32px;
+}
+
+h5, .text-h5 {
+  @extend .text-bold;
+  font-size: 28px;
+  line-height: 50px;
+}
+
+h6, .text-h6 {
+  @extend .text-bold;
+  font-size: 22px;
+  line-height: 1.55em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+p {
+  font-size: 18px;
+  line-height: 32px;
+}

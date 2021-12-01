@@ -1,0 +1,91 @@
+@import "variables";
+
+.primary-button {
+  font-weight: 600;
+  background-color: $colorPrimary;
+  color: $colorButtonText;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  &:hover {
+    background-color: $colorPrimaryLighten;
+  };
+  &:active {
+    background-color: $colorPrimary;
+  };
+}
+
+.light-button {
+  @extend .primary-button;
+  background-color: $colorPrimaryLighten;
+  &:hover {
+    background-color: $colorPrimary;
+  };
+  &:active {
+    background-color: $colorPrimaryLighten;
+  };
+}
+
+.play-button {
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  background-color: rgb(255, 255, 255, 0.19);
+  &::after{
+    content: '';
+    height: 20px;
+    width: 15px;
+    transform: translateX(20%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid $colorPrimary;
+    box-sizing: border-box;
+  };
+  &:hover::after {
+    border-left: 15px solid $colorPrimaryLighten;
+  };
+}
+
+.switch {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 46px;
+  padding: 4px;
+  border: 1px solid #E8E8EA;
+  border-radius: 23px;
+}
+
+.switch__button {
+  width: 120px;
+  height: 100%;
+  padding: 0;
+  border-radius: 19px;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  color: $colorButtonText;
+  font-weight: 600;
+}
+
+.switched {
+  background: $colorPrimary;
+}
+
+input[type=submit].form-request__submit {
+  @extend .light-button;
+  width: 100%;
+}
+
+.input-file__button {
+  text-align: center;
+  padding: 9px 12px;
+  border-radius: 3px;
+  background: #F2F5F8;
+  cursor: pointer;
+  &:hover {
+    background: rgba($colorGreyLighten-1, 0.4);
+  };
+}

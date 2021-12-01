@@ -1,0 +1,323 @@
+@import "reset";
+@import "bootstrap-grid.css";
+@import "fonts";
+@import "variables";
+@import "display";
+@import "typography";
+@import "spaces";
+@import "buttons";
+@import "burger-menu";
+
+@mixin pointersWithShadow($pointerColors) {
+  @each $colorName, $color in $pointerColors {
+    .#{$colorName}-pointer {
+      width: 50px;
+      height: 50px;
+      background: rgba($color, 0.06);
+      border-radius: 50%;
+      box-sizing: border-box;
+      box-shadow: inset 0 0 0 20px rgba($color, 0.06);
+    }
+    .#{$colorName}-pointer__point {
+      margin: 20px;
+      width: 10px;
+      height: 10px;
+      background: $color;
+      border-radius: 50%;
+    }
+  }
+}
+
+@include pointersWithShadow($pointerColors);
+
+.w-100 {
+  width: 100%;
+}
+
+html {
+  font: {
+    family: Inter, sans-serif;
+    weight: 400;
+    size: 16px;
+  };
+  line-height: 1.5em;
+}
+
+.radius-5 {
+  border-radius: 5px;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.logo {
+  min-width: 96px;
+}
+
+.main-info {
+  background-image: url("../images/pictures/background_room_1.png"), $colorAccent;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-info__content {
+  padding-top: 90px;
+  max-width: 650px;
+
+  & :nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+.advantages-list__item {
+  max-width: 310px;
+}
+
+.advantage-item-wrapper {
+  position: relative;
+}
+
+.advantages-list__item::after {
+  position: absolute;
+  right: 0;
+  top: 170px;
+  content: '';
+  height: 110px;
+  border-left: 1px solid transparent;
+}
+
+.advantage-item-wrapper:not(:nth-child(3n), :last-child) .advantages-list__item::after {
+  border-color: #E8E8EA;
+}
+
+.manage {
+  background-color: $colorBackgroundLighten;
+}
+
+.manage,
+.build {
+  padding-top: 80px;
+}
+
+.manage__content,
+.build__content {
+  max-width: 440px;
+}
+
+.manage__picture--1 {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.103346);
+}
+
+.manage__picture--1__container {
+  position: relative;
+  z-index: 1;
+}
+
+.manage__picture--1__container::after {
+  content: "";
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  bottom: 20%;
+  right: -5%;
+  left: -5%;
+  background: linear-gradient(180deg, rgba(248, 251, 254, 0.0001) -26.82%, #F8FBFE 100%);
+}
+
+.manage__picture--2 {
+  box-shadow: 0 22px 54px rgba(67, 87, 138, 0.29);
+}
+
+.manage__picture--2__container {
+  z-index: 2;
+  margin: 17% 0 0 -22%;
+}
+
+.build__picture--1 {
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.136011);
+}
+
+.build__picture--1__container {
+  margin-right: -20.5%;
+}
+
+.build__picture--2 {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.103346);
+}
+
+.build__picture--2__container {
+  position: relative;
+  margin-top: 10%;
+  z-index: -1;
+}
+
+.build__picture--2__container::after {
+  content: "";
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 33%;
+  bottom: 0;
+  right: -5%;
+  left: -5%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) -23.88%, #FFFFFF 100%);
+}
+
+.help {
+  background-image: url("../images/pictures/background_room_2.png"), $colorAccent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.help__content,
+.plan__content {
+  max-width: 750px;
+}
+
+.plan {
+  background: linear-gradient(to bottom, $colorBackgroundLighten 50%, white 50%);
+}
+
+.tariff-card {
+  background: white;
+}
+
+.pro-card {
+  border-top: 4px solid $colorPrimary;
+}
+
+.tariff-head {
+  letter-spacing: 0.433333px;
+}
+
+.price__currency {
+  vertical-align: top;
+}
+
+.tariff-description {
+  line-height: 22px;
+  letter-spacing: -0.4px;
+}
+
+.service {
+  margin-bottom: 20px;
+  list-style-image: url("../images/icons/check.png");
+}
+
+.not-included {
+  color: $colorGreyLighten-1;
+  text-decoration: line-through;
+  list-style-image: url("../images/icons/check-lighten.png");
+}
+
+.review-list__content {
+  border: 1px solid $colorGreyLighten-2;
+  border-radius: 10px;
+}
+
+.review-list__item {
+  position: relative;
+}
+
+//todo: add border only for active not last slide
+.slick-active:last-of-type::after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 1px solid red;
+}
+
+.review-card__quote {
+  font-size: 96px;
+  line-height: 100px;
+}
+
+//todo: not use important
+.slick-prev::before,
+.slick-next::before {
+  color: $colorGreyLighten-2 !important;
+}
+
+.request {
+  background: linear-gradient(to top, $colorBackgroundLighten 65%, white 35%);
+}
+
+.form-request {
+  border: 1px solid #E8E8EA;
+  box-shadow: 0px 22px 54px rgba(67, 87, 138, 0.29);
+  border-radius: 10px;
+  background: white;
+}
+
+.form-request__field {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #E8E8EA;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $colorGreyDarken-1;
+  }
+
+  &:focus {
+    box-shadow: 4px 4px 4px rgba(67, 87, 138, 0.1);
+
+    &::placeholder {
+      color: $colorGreyLighten-2;
+    }
+  }
+}
+
+#file-input {
+  display: none;
+}
+
+footer {
+  background: linear-gradient(315.06deg, #152649 5%, #4F525C 100%);
+}
+
+.footer-nav__header {
+  font-size: 14px;
+  color: $colorGreyLighten-2;
+  margin-bottom: 48px;
+}
+
+.footer-nav__link {
+  margin-bottom: 80px;
+}
+
+.list__item, .list__item_111 {
+  margin: 50px;
+  height: 150px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid #50E3C2;
+  background: #969696;
+  text-align: center;
+  line-height: 100px;
+  position: relative;
+}
+
+.list__item_111 {
+  background-color: #A665FB;
+}
+
+.list__item:not(:last-of-type)::after {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 40px;
+  width: 40px;
+  content: '';
+  background-color: black;
+}
+
+@import "media";
