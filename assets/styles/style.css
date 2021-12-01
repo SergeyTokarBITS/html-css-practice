@@ -5892,14 +5892,6 @@ footer {
   }
 }
 @media all and (max-width: 576px) {
-  section {
-    padding: 34px 0;
-  }
-
-  .main-info__content {
-    padding-top: 30px;
-  }
-
   h1, .text-h1 {
     font-size: 36px;
     line-height: 1.2em;
