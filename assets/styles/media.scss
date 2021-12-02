@@ -9,6 +9,11 @@
     padding-top: 75px;
   }
 
+  .manage,
+  .build {
+    padding-top: 68px;
+  }
+
   //todo: try to find better solution
   .advantage-item-wrapper .advantages-list__item::after {
     border-color: transparent !important;
@@ -20,6 +25,22 @@
 }
 
 @media all and (max-width: $lg) {
+  h1, .text-h1 {
+    font-size: 42px;
+  }
+
+  h3, .text-h3 {
+    font-size: 34px;
+  }
+
+  h5, .text-h5 {
+    font-size: 26px;
+  }
+
+  h6, .text-h6 {
+    font-size: 20px;
+  }
+
   section {
     padding: 80px 0;
   }
@@ -28,29 +49,31 @@
     padding-top: 60px;
   }
 
-  h1, .text-h1 {
-    font-size: 42px;
-    line-height: 1.4em;
+  .manage,
+  .build {
+    padding-top: 52px;
   }
 }
 
 @media all and (max-width: $md) {
+  h1, .text-h1 {
+    font-size: 38px;
+  }
+
+  h3, .text-h3 {
+    font-size: 32px;
+  }
+
+  h5, .text-h5 {
+    font-size: 24px;
+  }
+
   section {
     padding: 60px 0;
   }
 
   .main-info__content {
     padding-top: 45px;
-  }
-
-  h1, .text-h1 {
-    font-size: 38px;
-    line-height: 1.3em;
-  }
-
-  //todo: try to find better solution
-  .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
-    border-color: transparent !important;
   }
 
   .burger-menu {
@@ -60,11 +83,34 @@
   .header-nav {
     display: none;
   }
+
+  .manage,
+  .build {
+    padding-top: 40px;
+  }
+
+  //todo: try to find better solution
+  .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
+    border-color: transparent !important;
+  }
+
+  //todo: is it possible without important? Now used because of grid d-flex important
+  .manage__picture {
+    display: none !important;
+  }
+
+  .build__picture {
+    display: none !important;
+  }
+
 }
 
 @media all and (max-width: $sm) {
   h1, .text-h1 {
-    font-size: 36px;
-    line-height: 1.2em;
+    font-size: 34px;
+  }
+
+  h3, .text-h3 {
+    font-size: 30px;
   }
 }
