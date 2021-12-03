@@ -26,7 +26,7 @@
           </div>
 
           <div class="col-7 col-sm-5 col-md-4 col-lg-3 d-flex justify-content-end">
-            <nav class="header-nav w-100">
+            <nav class="header-nav w-100 d-none d-md-block">
               <ul class="header-nav__links d-flex justify-space-between align-center text-color-grey-lighten-2">
                 <li>
                   <a href="#">Demos</a>
@@ -40,7 +40,7 @@
               </ul>
             </nav>
 
-            <div class="burger-menu">
+            <div class="burger-menu d-block d-md-none">
               <input id="menu__toggle" type="checkbox"/>
               <label class="menu__button" for="menu__toggle">
                 <span></span>
@@ -208,8 +208,8 @@
   <section class="manage">
     <div class="container">
       <div class="row justify-space-between">
-        <div class="col-lg-6 d-flex justify-center align-center mt-0 mt-md-7 mt-lg-8 mt-xl-10 mb-0 mb-md-3 mb-lg-0">
-          <div class="manage__picture d-flex">
+        <div class="col-lg-6 d-flex justify-center align-center">
+          <div class="manage__picture d-none d-md-flex">
             <div class="manage__picture--1__container">
               <img src="./assets/images/pictures/analytics_1.png" alt="analytics dashboard"
                    class="manage__picture--1 radius-5">
@@ -220,7 +220,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 d-flex justify-center align-center mt-5 mt-md-7 mt-lg-8 mt-xl-10">
+        <div class="col-lg-6 d-flex justify-center align-center mt-0 mt-md-10 mt-lg-0">
           <div class="manage__content">
             <h2 class="text-h3 mb-6">Manage everything faster in single place.</h2>
             <p class="mb-9">Create custom landing pages with Berlin that convert more visitors than any
@@ -236,7 +236,7 @@
   <section class="build">
     <div class="container d-flex justify-space-between">
       <div class="row">
-        <div class="col-lg-6 d-flex justify-center align-center mt-5 mt-md-7 mt-lg-8 mt-xl-10 mb-0 mb-md-3 mb-lg-0">
+        <div class="col-lg-6 d-flex justify-center align-center">
           <div class="build__content">
             <h2 class="text-h3 mb-6">Build better team work faster and better!</h2>
             <p class="mb-9">Create custom landing pages with Berlin that convert more visitors than any
@@ -245,8 +245,8 @@
             <button class="light-button">Start free 14 days trial</button>
           </div>
         </div>
-        <div class="col-lg-6 d-flex justify-center align-center mt-0 mt-md-7 mt-lg-8 mt-xl-10">
-          <div class="build__picture d-flex justify-end">
+        <div class="col-lg-6 d-flex justify-center align-center mt-0 mt-md-10 mt-lg-0">
+          <div class="build__picture d-none d-md-flex justify-end">
             <div class="build__picture--1__container">
               <img src="./assets/images/pictures/activity_1.png" alt="activity list" class="build__picture--1 radius-5">
             </div>
@@ -332,15 +332,20 @@
     </div>
   </section>
 
-  <section class="brands m-auto pa-0 text-align-center">
-    <p class="text-color-grey-lighten-1 text-size-16">We are proud to have some big brands as our customer</p>
-    <div class="brands-logo d-flex justify-center align-center flex-wrap">
-      <img class="brands-logo__item mt-10 mr-6 ml-6" src="./assets/images/pictures/brands/Growbots.png"
-           alt="Growbots logo">
-      <img class="brands-logo__item mt-10 mr-6 ml-6" src="./assets/images/pictures/brands/Funnel.png" alt="Funnel logo">
-      <img class="brands-logo__item mt-10 mr-6 ml-6" src="./assets/images/pictures/brands/DigitalOcean.png"
-           alt="DigitalOcean logo">
-      <img class="brands-logo__item mt-10 mr-6 ml-6" src="./assets/images/pictures/brands/Sketch.png" alt="Sketch logo">
+  <section class="brands pa-0 text-align-center">
+    <div class="container">
+      <p class="text-color-grey-lighten-1 text-size-16 mb-10">We are proud to have some big brands as our customer</p>
+      <div class="brands-logo m-auto">
+        <img class="brands-logo__item mr-6 ml-6" src="./assets/images/pictures/brands/Growbots.png"
+             alt="Growbots logo">
+        <img class="brands-logo__item mr-6 ml-6" src="./assets/images/pictures/brands/Funnel.png" alt="Funnel logo">
+        <img class="brands-logo__item mr-6 ml-6" src="./assets/images/pictures/brands/DigitalOcean.png"
+             alt="DigitalOcean logo">
+        <img class="brands-logo__item mr-6 ml-6" src="./assets/images/pictures/brands/Sketch.png" alt="Sketch logo">
+        <img class="brands-logo__item mr-6 ml-6" src="./assets/images/pictures/brands/Sketch.png" alt="Sketch logo">
+        <img class="brands-logo__item mr-6 ml-6" src="./assets/images/pictures/brands/Sketch.png" alt="Sketch logo">
+        <img class="brands-logo__item mr-6 ml-6" src="./assets/images/pictures/brands/Sketch.png" alt="Sketch logo">
+      </div>
     </div>
   </section>
 
@@ -418,11 +423,11 @@
 
   <section class="clicker pa-0">
     <div class="container">
-      <div class="clicker__content row align-center justify-content-between">
-        <div class="col-9">
+      <div class="clicker__content row align-center justify-content-around">
+        <div class="col-auto text-align-center">
           <h3 class="text-h5">Manage your team in one place</h3>
         </div>
-        <div class="col-3">
+        <div class="col-auto mt-4 mt-md-0">
           <button class="primary-button">Start free 14 days trial</button>
         </div>
       </div>
@@ -435,7 +440,7 @@
 
       <div class="row justify-center">
         <div class="col col-xl-6 col-lg-8 col-md-10">
-          <form class="form-request px-13 py-10">
+          <form class="form-request px-6 px-sm-13 py-4 py-sm-10">
             <input type="text" placeholder="First name" name="first-name"
                    class="form-request__field input__first-name pa-4 my-3">
             <input type="text" placeholder="Last name" name="last-name"
@@ -443,10 +448,10 @@
             <input type="email" placeholder="Email" name="email" class="form-request__field input__email pa-4 my-3">
             <input type="tel" placeholder="Phone" name="phone" class="form-request__field input__phone pa-4 my-3">
             <div class="row my-3">
-              <div class="col-7 d-flex align-center">
+              <div class="col-md-7 d-flex align-center">
                 <p class="text-size-14">You can attach files or documents</p>
               </div>
-              <div class="col-5">
+              <div class="col-md-5">
                 <label for="file-input">
                   <div class="input-file__button">
                     <img src="./assets/images/icons/clip.png" alt="clip">

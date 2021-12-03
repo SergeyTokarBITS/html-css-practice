@@ -9,11 +9,6 @@
     padding-top: 75px;
   }
 
-  .manage,
-  .build {
-    padding-top: 68px;
-  }
-
   //todo: try to find better solution
   .advantage-item-wrapper .advantages-list__item::after {
     border-color: transparent !important;
@@ -48,11 +43,6 @@
   .main-info__content {
     padding-top: 60px;
   }
-
-  .manage,
-  .build {
-    padding-top: 52px;
-  }
 }
 
 @media all and (max-width: $md) {
@@ -76,33 +66,10 @@
     padding-top: 45px;
   }
 
-  .burger-menu {
-    display: block;
-  }
-
-  .header-nav {
-    display: none;
-  }
-
-  .manage,
-  .build {
-    padding-top: 40px;
-  }
-
   //todo: try to find better solution
   .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
     border-color: transparent !important;
   }
-
-  //todo: is it possible without important? Now used because of grid d-flex important
-  .manage__picture {
-    display: none !important;
-  }
-
-  .build__picture {
-    display: none !important;
-  }
-
 }
 
 @media all and (max-width: $sm) {

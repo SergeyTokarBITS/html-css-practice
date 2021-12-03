@@ -95,11 +95,6 @@ section {
   background-color: $colorBackgroundLighten;
 }
 
-.manage,
-.build {
-  padding-top: 80px;
-}
-
 .manage__content,
 .build__content {
   max-width: 440px;
@@ -213,6 +208,16 @@ section {
   list-style-image: url("../images/icons/check-lighten.png");
 }
 
+.brands-logo {
+  max-width: 850px;
+}
+
+.brands-logo .slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .review-list__content {
   border: 1px solid $colorGreyLighten-2;
   border-radius: 10px;
@@ -235,12 +240,6 @@ section {
 .review-card__quote {
   font-size: 96px;
   line-height: 100px;
-}
-
-//todo: not use important
-.slick-prev::before,
-.slick-next::before {
-  color: $colorGreyLighten-2 !important;
 }
 
 .request {

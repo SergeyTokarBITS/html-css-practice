@@ -5421,6 +5421,37 @@ p {
   background: #50E3C2;
 }
 
+.custom-arrow {
+  border: none;
+  background: transparent;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 10%;
+}
+
+.brands-logo .custom-arrow {
+  border-radius: 0;
+  width: 5%;
+}
+
+.slick-custom-prev-arrow {
+  left: 0;
+  border-radius: 10px 0 0 10px;
+}
+.slick-custom-prev-arrow:hover {
+  background: linear-gradient(90deg, rgba(219, 228, 241, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.slick-custom-next-arrow {
+  right: 0;
+  border-radius: 0 10px 10px 0;
+}
+.slick-custom-next-arrow:hover {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(219, 228, 241, 0.5) 100%);
+}
+
 input[type=submit].form-request__submit {
   width: 100%;
 }
@@ -5614,11 +5645,6 @@ section {
   background-color: #F8FBFE;
 }
 
-.manage,
-.build {
-  padding-top: 80px;
-}
-
 .manage__content,
 .build__content {
   max-width: 440px;
@@ -5732,6 +5758,16 @@ section {
   list-style-image: url("../images/icons/check-lighten.png");
 }
 
+.brands-logo {
+  max-width: 850px;
+}
+
+.brands-logo .slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .review-list__content {
   border: 1px solid #DBE4F1;
   border-radius: 10px;
@@ -5753,11 +5789,6 @@ section {
 .review-card__quote {
   font-size: 96px;
   line-height: 100px;
-}
-
-.slick-prev::before,
-.slick-next::before {
-  color: #DBE4F1 !important;
 }
 
 .request {
@@ -5814,11 +5845,6 @@ footer {
     padding-top: 75px;
   }
 
-  .manage,
-.build {
-    padding-top: 68px;
-  }
-
   .advantage-item-wrapper .advantages-list__item::after {
     border-color: transparent !important;
   }
@@ -5851,11 +5877,6 @@ footer {
   .main-info__content {
     padding-top: 60px;
   }
-
-  .manage,
-.build {
-    padding-top: 52px;
-  }
 }
 @media all and (max-width: 768px) {
   h1, .text-h1 {
@@ -5878,29 +5899,8 @@ footer {
     padding-top: 45px;
   }
 
-  .burger-menu {
-    display: block;
-  }
-
-  .header-nav {
-    display: none;
-  }
-
-  .manage,
-.build {
-    padding-top: 40px;
-  }
-
   .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
     border-color: transparent !important;
-  }
-
-  .manage__picture {
-    display: none !important;
-  }
-
-  .build__picture {
-    display: none !important;
   }
 }
 @media all and (max-width: 576px) {

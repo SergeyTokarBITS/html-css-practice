@@ -1,13 +1,15 @@
-import { breakpoints } from "./breakpoints.js";
+import {breakpoints} from "./breakpoints.js";
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.review-list__content').slick({
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 1000000,
-        speed: 300,
+        autoplaySpeed: 5000,
+        speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-custom-prev-arrow custom-arrow"></button>',
+        nextArrow: '<button type="button" class="slick-custom-next-arrow custom-arrow"></button>',
         responsive: [
             {
                 breakpoint: breakpoints.xl,
@@ -24,5 +26,39 @@ $(document).ready(function(){
                 }
             },
         ]
-});
+    });
+    $('.brands-logo').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-custom-prev-arrow custom-arrow"></button>',
+        nextArrow: '<button type="button" class="slick-custom-next-arrow custom-arrow"></button>',
+        responsive: [
+            {
+                breakpoint: breakpoints.lg,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: breakpoints.md,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: breakpoints.sm,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
+
 });
