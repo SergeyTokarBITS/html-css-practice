@@ -84,12 +84,15 @@
   width: 10%;
 }
 
-.brands-logo .custom-arrow {
-  border-radius: 0;
-  width: 5%;
+.brands-slider-prev-arrow {
+  left: 0;
 }
 
-.slick-custom-prev-arrow {
+.brands-slider-next-arrow {
+  right: 0;
+}
+
+.review-slider-prev-arrow {
   left: 0;
   border-radius: 10px 0 0 10px;
   &:hover {
@@ -97,17 +100,12 @@
   }
 }
 
-.slick-custom-next-arrow {
+.review-slider-next-arrow {
   right: 0;
   border-radius: 0 10px 10px 0;
   &:hover {
     background: linear-gradient(90deg, rgba(white, 0.1) 0%, rgba($colorGreyLighten-2, 0.5) 100%);
   }
-}
-
-input[type=submit].form-request__submit {
-  @extend .light-button;
-  width: 100%;
 }
 
 .input-file__button {
@@ -119,4 +117,9 @@ input[type=submit].form-request__submit {
   &:hover {
     background: rgba($colorGreyLighten-1, 0.4);
   };
+}
+
+input[type=submit].form-request__submit {
+  @extend .light-button;
+  width: 100%;
 }

@@ -8,8 +8,8 @@ $(document).ready(function () {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-custom-prev-arrow custom-arrow"></button>',
-        nextArrow: '<button type="button" class="slick-custom-next-arrow custom-arrow"></button>',
+        prevArrow: '<button type="button" class="review-slider-prev-arrow custom-arrow"></button>',
+        nextArrow: '<button type="button" class="review-slider-next-arrow custom-arrow"></button>',
         responsive: [
             {
                 breakpoint: breakpoints.xl,
@@ -34,8 +34,8 @@ $(document).ready(function () {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-custom-prev-arrow custom-arrow"></button>',
-        nextArrow: '<button type="button" class="slick-custom-next-arrow custom-arrow"></button>',
+        prevArrow: '<button type="button" class="brands-slider-prev-arrow custom-arrow"></button>',
+        nextArrow: '<button type="button" class="brands-slider-next-arrow custom-arrow"></button>',
         responsive: [
             {
                 breakpoint: breakpoints.lg,

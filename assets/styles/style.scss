@@ -213,9 +213,7 @@ section {
 }
 
 .brands-logo .slick-track {
-  display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .review-list__content {
@@ -223,18 +221,37 @@ section {
   border-radius: 10px;
 }
 
+//todo: solution from stackoverflow try to find better
+.slick-track
+{
+  display: flex !important;
+}
+
+.slick-slide
+{
+  height: inherit !important;
+}
+
 .review-list__item {
   position: relative;
 }
 
 //todo: add border only for active not last slide
-.slick-active:last-of-type::after {
+.slick-active:not(:last-child)::after {
   content: '';
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
   border-left: 1px solid red;
+}
+
+.review-card {
+  height: 100%;
+}
+
+.review {
+  flex-grow: 1;
 }
 
 .review-card__quote {
@@ -288,6 +305,11 @@ footer {
 
 .footer-nav__link {
   margin-bottom: 80px;
+}
+
+.social-media-links {
+  min-width: 80px;
+  max-width: 85px;
 }
 
 @import "media";
