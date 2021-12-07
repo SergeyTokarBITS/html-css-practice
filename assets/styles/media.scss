@@ -17,6 +17,11 @@
   .advantage-item-wrapper:not(:nth-child(2n), :last-child) .advantages-list__item::after {
     border-color: #E8E8EA !important;
   }
+
+  //todo: better solutions?
+  .review-list__item.slick-active + .review-list__item.slick-active {
+    border-right: none;
+  }
 }
 
 @media all and (max-width: $lg) {
@@ -69,6 +74,11 @@
   //todo: try to find better solution
   .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
     border-color: transparent !important;
+  }
+
+  //todo: better solutions?
+  .review-list__item.slick-active {
+    border-right: none;
   }
 }
 

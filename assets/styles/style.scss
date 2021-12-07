@@ -64,14 +64,9 @@ section {
 .main-info__content {
   padding-top: 90px;
   max-width: 650px;
-
-  & :nth-child(1) {
+  & :first-child {
     margin-top: 0;
   }
-}
-
-.advantages-list__item {
-  max-width: 310px;
 }
 
 .advantage-item-wrapper {
@@ -95,10 +90,10 @@ section {
   background-color: $colorBackgroundLighten;
 }
 
-.manage__content,
-.build__content {
-  max-width: 440px;
-}
+//.manage__content,
+//.build__content {
+//  max-width: 440px;
+//}
 
 .manage__picture--1 {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.103346);
@@ -222,28 +217,21 @@ section {
 }
 
 //todo: solution from stackoverflow try to find better
-.slick-track
-{
+.slick-track {
   display: flex !important;
 }
 
-.slick-slide
-{
+.slick-slide {
   height: inherit !important;
 }
 
-.review-list__item {
-  position: relative;
+.review-list__item.slick-active {
+  border-right: 1px solid $colorGreyLighten-2;
 }
 
-//todo: add border only for active not last slide
-.slick-active:not(:last-child)::after {
-  content: '';
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-left: 1px solid red;
+//todo: better solutions?
+.review-list__item.slick-active + .review-list__item.slick-active + .review-list__item.slick-active {
+  border-right: none;
 }
 
 .review-card {
@@ -298,18 +286,22 @@ footer {
 }
 
 .footer-nav__header {
-  font-size: 14px;
+  line-height: 20px;
+  height: 55px;
   color: $colorGreyLighten-2;
-  margin-bottom: 48px;
 }
 
 .footer-nav__link {
-  margin-bottom: 80px;
+  height: 70px;
+  line-height: 20px;
 }
 
-.social-media-links {
-  min-width: 80px;
-  max-width: 85px;
+.internal-links {
+  max-width: 300px;
+}
+
+.soc-med-links__list--item:first-child .soc-med-link{
+  padding-left: 0;
 }
 
 @import "media";

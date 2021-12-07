@@ -5619,12 +5619,8 @@ section {
   padding-top: 90px;
   max-width: 650px;
 }
-.main-info__content :nth-child(1) {
+.main-info__content :first-child {
   margin-top: 0;
-}
-
-.advantages-list__item {
-  max-width: 310px;
 }
 
 .advantage-item-wrapper {
@@ -5646,11 +5642,6 @@ section {
 
 .manage {
   background-color: #F8FBFE;
-}
-
-.manage__content,
-.build__content {
-  max-width: 440px;
 }
 
 .manage__picture--1 {
@@ -5782,17 +5773,12 @@ section {
   height: inherit !important;
 }
 
-.review-list__item {
-  position: relative;
+.review-list__item.slick-active {
+  border-right: 1px solid #DBE4F1;
 }
 
-.slick-active:not(:last-child)::after {
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-left: 1px solid red;
+.review-list__item.slick-active + .review-list__item.slick-active + .review-list__item.slick-active {
+  border-right: none;
 }
 
 .review-card {
@@ -5844,18 +5830,22 @@ footer {
 }
 
 .footer-nav__header {
-  font-size: 14px;
+  line-height: 20px;
+  height: 55px;
   color: #DBE4F1;
-  margin-bottom: 48px;
 }
 
 .footer-nav__link {
-  margin-bottom: 80px;
+  height: 70px;
+  line-height: 20px;
 }
 
-.social-media-links {
-  min-width: 80px;
-  max-width: 85px;
+.internal-links {
+  max-width: 300px;
+}
+
+.soc-med-links__list--item:first-child .soc-med-link {
+  padding-left: 0;
 }
 
 @media all and (max-width: 1200px) {
@@ -5873,6 +5863,10 @@ footer {
 
   .advantage-item-wrapper:not(:nth-child(2n), :last-child) .advantages-list__item::after {
     border-color: #E8E8EA !important;
+  }
+
+  .review-list__item.slick-active + .review-list__item.slick-active {
+    border-right: none;
   }
 }
 @media all and (max-width: 992px) {
@@ -5923,6 +5917,10 @@ footer {
 
   .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
     border-color: transparent !important;
+  }
+
+  .review-list__item.slick-active {
+    border-right: none;
   }
 }
 @media all and (max-width: 576px) {
