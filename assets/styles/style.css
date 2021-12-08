@@ -380,46 +380,6 @@ textarea {
   font-weight: 700;
   src: url("../fonts/inter-v3-latin-700.woff2") format("woff2"), url("../fonts/inter-v3-latin-700.woff") format("woff");
 }
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.justify-space-between {
-  justify-content: space-between;
-}
-
-.justify-space-around {
-  justify-content: space-around;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-end {
-  justify-content: end;
-}
-
-.justify-self-end {
-  justify-self: end;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.d-block {
-  display: block;
-}
-
-.text-align-center {
-  text-align: center;
-}
-
 .text-size-12 {
   font-size: 12px;
 }
@@ -478,6 +438,10 @@ textarea {
 
 .text-color-grey-darken-1 {
   color: #323232;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 h1, .text-h1 {

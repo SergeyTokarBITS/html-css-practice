@@ -46,6 +46,10 @@
   color: $colorGreyDarken-1;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 h1, .text-h1 {
   @extend .text-bold;
   font-size: 46px;
