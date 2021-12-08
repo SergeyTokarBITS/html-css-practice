@@ -32,10 +32,9 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 7000,
         speed: 500,
+        arrows: false,
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="brands-slider-prev-arrow custom-arrow"></button>',
-        nextArrow: '<button type="button" class="brands-slider-next-arrow custom-arrow"></button>',
         responsive: [
             {
                 breakpoint: breakpoints.lg,

@@ -300,8 +300,12 @@ footer {
   max-width: 300px;
 }
 
-.soc-med-links__list--item:first-child .soc-med-link{
+.social-media-links__list--item:first-child .social-media-link {
   padding-left: 0;
+}
+
+.social-media-links__list--item:last-child .social-media-link {
+  padding-right: 0;
 }
 
 @import "media";

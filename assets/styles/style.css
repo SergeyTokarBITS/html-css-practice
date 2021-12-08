@@ -5431,14 +5431,6 @@ p {
   width: 10%;
 }
 
-.brands-slider-prev-arrow {
-  left: 0;
-}
-
-.brands-slider-next-arrow {
-  right: 0;
-}
-
 .review-slider-prev-arrow {
   left: 0;
   border-radius: 10px 0 0 10px;
@@ -5844,8 +5836,12 @@ footer {
   max-width: 300px;
 }
 
-.soc-med-links__list--item:first-child .soc-med-link {
+.social-media-links__list--item:first-child .social-media-link {
   padding-left: 0;
+}
+
+.social-media-links__list--item:last-child .social-media-link {
+  padding-right: 0;
 }
 
 @media all and (max-width: 1200px) {
