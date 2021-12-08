@@ -38,8 +38,7 @@ html {
     family: Inter, sans-serif;
     weight: 400;
     size: 16px;
-  };
-  line-height: 1.5em;
+  }
 }
 
 .radius-5 {
@@ -88,11 +87,6 @@ section {
 .manage {
   background-color: $colorBackgroundLighten;
 }
-
-//.manage__content,
-//.build__content {
-//  max-width: 440px;
-//}
 
 .manage__picture--1 {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.103346);
@@ -192,7 +186,6 @@ section {
 }
 
 .service {
-  margin-bottom: 20px;
   list-style-image: url("../images/icons/check.png");
 }
 
@@ -259,7 +252,6 @@ section {
 
 .form-request__field {
   height: 50px;
-  width: 100%;
   border: 1px solid #E8E8EA;
   border-radius: 3px;
 
@@ -288,11 +280,6 @@ footer {
   line-height: 20px;
   height: 55px;
   color: $colorGreyLighten-2;
-}
-
-.footer-nav__link {
-  height: 70px;
-  line-height: 20px;
 }
 
 .internal-links {
