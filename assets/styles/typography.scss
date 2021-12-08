@@ -46,10 +46,14 @@
   color: $colorGreyDarken-1;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 h1, .text-h1 {
   @extend .text-bold;
   font-size: 46px;
-  line-height: 1.48em;
+  line-height: 1.5em;
   letter-spacing: -0.3px;
 }
 
@@ -60,7 +64,7 @@ h2, .text-h2 {
 h3, .text-h3 {
   @extend .text-bold;
   font-size: 38px;
-  line-height: 1.32em;
+  line-height: 1.3em;
   letter-spacing: -0.3px;
 }
 
@@ -71,7 +75,7 @@ h4, .text-h4 {
 h5, .text-h5 {
   @extend .text-bold;
   font-size: 28px;
-  line-height: 50px;
+  line-height: 1.8em;
 }
 
 h6, .text-h6 {

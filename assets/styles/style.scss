@@ -2,7 +2,6 @@
 @import "bootstrap-grid.css";
 @import "fonts";
 @import "variables";
-@import "display";
 @import "typography";
 @import "spaces";
 @import "buttons";
@@ -39,8 +38,7 @@ html {
     family: Inter, sans-serif;
     weight: 400;
     size: 16px;
-  };
-  line-height: 1.5em;
+  }
 }
 
 .radius-5 {
@@ -64,14 +62,9 @@ section {
 .main-info__content {
   padding-top: 90px;
   max-width: 650px;
-
-  & :nth-child(1) {
+  & :first-child {
     margin-top: 0;
   }
-}
-
-.advantages-list__item {
-  max-width: 310px;
 }
 
 .advantage-item-wrapper {
@@ -93,16 +86,6 @@ section {
 
 .manage {
   background-color: $colorBackgroundLighten;
-}
-
-.manage,
-.build {
-  padding-top: 80px;
-}
-
-.manage__content,
-.build__content {
-  max-width: 440px;
 }
 
 .manage__picture--1 {
@@ -203,7 +186,6 @@ section {
 }
 
 .service {
-  margin-bottom: 20px;
   list-style-image: url("../images/icons/check.png");
 }
 
@@ -213,34 +195,48 @@ section {
   list-style-image: url("../images/icons/check-lighten.png");
 }
 
+.brands-logo {
+  max-width: 850px;
+}
+
+.brands-logo .slick-track {
+  align-items: center;
+}
+
 .review-list__content {
   border: 1px solid $colorGreyLighten-2;
   border-radius: 10px;
 }
 
-.review-list__item {
-  position: relative;
+//todo: solution from stackoverflow try to find better
+.slick-track {
+  display: flex !important;
 }
 
-//todo: add border only for active not last slide
-.slick-active:last-of-type::after {
-  content: '';
+.slick-slide {
+  height: inherit !important;
+}
+
+.review-list__item.slick-active {
+  border-right: 1px solid $colorGreyLighten-2;
+}
+
+//todo: better solutions?
+.review-list__item.slick-active + .review-list__item.slick-active + .review-list__item.slick-active {
+  border-right: none;
+}
+
+.review-card {
   height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-left: 1px solid red;
+}
+
+.review {
+  flex-grow: 1;
 }
 
 .review-card__quote {
   font-size: 96px;
   line-height: 100px;
-}
-
-//todo: not use important
-.slick-prev::before,
-.slick-next::before {
-  color: $colorGreyLighten-2 !important;
 }
 
 .request {
@@ -249,14 +245,13 @@ section {
 
 .form-request {
   border: 1px solid #E8E8EA;
-  box-shadow: 0px 22px 54px rgba(67, 87, 138, 0.29);
+  box-shadow: 0 22px 54px rgba(67, 87, 138, 0.29);
   border-radius: 10px;
   background: white;
 }
 
 .form-request__field {
   height: 50px;
-  width: 100%;
   border: 1px solid #E8E8EA;
   border-radius: 3px;
 
@@ -282,42 +277,21 @@ footer {
 }
 
 .footer-nav__header {
-  font-size: 14px;
+  line-height: 20px;
+  height: 55px;
   color: $colorGreyLighten-2;
-  margin-bottom: 48px;
 }
 
-.footer-nav__link {
-  margin-bottom: 80px;
+.internal-links {
+  max-width: 300px;
 }
 
-.list__item, .list__item_111 {
-  margin: 50px;
-  height: 150px;
-  width: 150px;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 10px;
-  border: 2px solid #50E3C2;
-  background: #969696;
-  text-align: center;
-  line-height: 100px;
-  position: relative;
+.social-media-links__list--item:first-child .social-media-link {
+  padding-left: 0;
 }
 
-.list__item_111 {
-  background-color: #A665FB;
-}
-
-.list__item:not(:last-of-type)::after {
-  display: block;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 40px;
-  width: 40px;
-  content: '';
-  background-color: black;
+.social-media-links__list--item:last-child .social-media-link {
+  padding-right: 0;
 }
 
 @import "media";

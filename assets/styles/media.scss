@@ -17,9 +17,30 @@
   .advantage-item-wrapper:not(:nth-child(2n), :last-child) .advantages-list__item::after {
     border-color: #E8E8EA !important;
   }
+
+  //todo: better solutions?
+  .review-list__item.slick-active + .review-list__item.slick-active {
+    border-right: none;
+  }
 }
 
 @media all and (max-width: $lg) {
+  h1, .text-h1 {
+    font-size: 42px;
+  }
+
+  h3, .text-h3 {
+    font-size: 34px;
+  }
+
+  h5, .text-h5 {
+    font-size: 26px;
+  }
+
+  h6, .text-h6 {
+    font-size: 20px;
+  }
+
   section {
     padding: 80px 0;
   }
@@ -27,14 +48,21 @@
   .main-info__content {
     padding-top: 60px;
   }
-
-  h1, .text-h1 {
-    font-size: 42px;
-    line-height: 1.4em;
-  }
 }
 
 @media all and (max-width: $md) {
+  h1, .text-h1 {
+    font-size: 38px;
+  }
+
+  h3, .text-h3 {
+    font-size: 32px;
+  }
+
+  h5, .text-h5 {
+    font-size: 24px;
+  }
+
   section {
     padding: 60px 0;
   }
@@ -43,37 +71,23 @@
     padding-top: 45px;
   }
 
-  h1, .text-h1 {
-    font-size: 38px;
-    line-height: 1.3em;
-  }
-
   //todo: try to find better solution
   .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
     border-color: transparent !important;
   }
 
-  .burger-menu {
-    display: block;
+  //todo: better solutions?
+  .review-list__item.slick-active {
+    border-right: none;
   }
-
-  .header-nav {
-    display: none;
-  }
-
 }
 
 @media all and (max-width: $sm) {
-  section {
-    padding: 34px 0;
-  }
-
-  .main-info__content {
-    padding-top: 30px;
-  }
-
   h1, .text-h1 {
-    font-size: 36px;
-    line-height: 1.2em;
+    font-size: 34px;
+  }
+
+  h3, .text-h3 {
+    font-size: 30px;
   }
 }

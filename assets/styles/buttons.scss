@@ -74,9 +74,30 @@
   background: $colorPrimary;
 }
 
-input[type=submit].form-request__submit {
-  @extend .light-button;
-  width: 100%;
+.custom-arrow {
+  border: none;
+  background: transparent;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 10%;
+}
+
+.review-slider-prev-arrow {
+  left: 0;
+  border-radius: 10px 0 0 10px;
+  &:hover {
+    background: linear-gradient(90deg, rgba($colorGreyLighten-2, 0.5) 0%, rgba(white, 0.1) 100%);
+  }
+}
+
+.review-slider-next-arrow {
+  right: 0;
+  border-radius: 0 10px 10px 0;
+  &:hover {
+    background: linear-gradient(90deg, rgba(white, 0.1) 0%, rgba($colorGreyLighten-2, 0.5) 100%);
+  }
 }
 
 .input-file__button {
@@ -88,4 +109,9 @@ input[type=submit].form-request__submit {
   &:hover {
     background: rgba($colorGreyLighten-1, 0.4);
   };
+}
+
+input[type=submit].form-request__submit {
+  @extend .light-button;
+  width: 100%;
 }
