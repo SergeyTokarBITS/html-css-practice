@@ -5312,6 +5312,10 @@ p {
   padding-right: 80px;
 }
 
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .primary-button, .light-button, input[type=submit].form-request__submit {
   font-weight: 600;
   background-color: #50E3C2;
