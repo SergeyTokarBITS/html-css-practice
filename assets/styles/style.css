@@ -5683,7 +5683,7 @@ section {
   border-top: 4px solid #50E3C2;
 }
 
-.tariff-head {
+.tariff-title {
   letter-spacing: 0.433333px;
 }
 
@@ -5782,7 +5782,7 @@ footer {
   background: linear-gradient(315.06deg, #152649 5%, #4F525C 100%);
 }
 
-.footer-nav__header {
+.footer-nav__title {
   line-height: 20px;
   height: 55px;
   color: #DBE4F1;
