@@ -24,13 +24,6 @@ $(document).ready(function () {
                     slidesToScroll: 1,
                 }
             },
-            {
-                breakpoint: breakpoints.sm,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
         ]
     });
     $('.review-list__content').slick({
