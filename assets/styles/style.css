@@ -377,7 +377,7 @@ textarea {
 @font-face {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   src: url("../fonts/inter-v3-latin-700.woff2") format("woff2"), url("../fonts/inter-v3-latin-700.woff") format("woff");
 }
 .text-size-12 {
