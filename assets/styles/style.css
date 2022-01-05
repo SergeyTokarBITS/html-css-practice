@@ -5846,6 +5846,10 @@ footer {
   .main-info__content {
     padding-top: 60px;
   }
+
+  .build__picture--1__container {
+    margin-right: -20.5%;
+  }
 }
 @media all and (max-width: 768px) {
   h1, .text-h1 {
@@ -5870,6 +5874,10 @@ footer {
 
   .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
     border-color: transparent !important;
+  }
+
+  .build__picture--1__container {
+    margin-right: -26%;
   }
 
   .review-list__item.slick-active {
