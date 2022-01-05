@@ -34,6 +34,7 @@
 }
 
 html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font: {
     family: Inter, sans-serif;
     weight: 400;
@@ -61,7 +62,7 @@ section {
 
 .main-info__content {
   padding-top: 90px;
-  max-width: 650px;
+  max-width: 600px;
   & :first-child {
     margin-top: 0;
   }
@@ -123,7 +124,7 @@ section {
 }
 
 .build__picture--1__container {
-  margin-right: -20.5%;
+  margin-right: -26%;
 }
 
 .build__picture--2 {
