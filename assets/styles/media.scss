@@ -48,6 +48,10 @@
   .main-info__content {
     padding-top: 60px;
   }
+
+  .build__picture--1__container {
+    margin-right: -20.5%;
+  }
 }
 
 @media all and (max-width: $md) {
@@ -74,6 +78,10 @@
   //todo: try to find better solution
   .advantage-item-wrapper:nth-child(n) .advantages-list__item::after {
     border-color: transparent !important;
+  }
+
+  .build__picture--1__container {
+    margin-right: -26%;
   }
 
   //todo: better solutions?
